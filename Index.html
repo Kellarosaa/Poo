@@ -5,6 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Embedded Website</title>
+    <style>
+        iframe {
+            width: 100%;
+            height: 100vh;
+        }
+    </style>
 </head>
 <body>
     <label for="website-url">Enter Website URL:</label>
@@ -15,7 +21,7 @@
     <script>
         function embedWebsite() {
             const url = document.getElementById('website-url').value;
-            document.getElementById('embedded-website').innerHTML = `<iframe src="${url}" width="100%" height="600"></iframe>`;
+            document.getElementById('embedded-website').innerHTML = `<iframe src="${url}"></iframe>`;
         }
     </script>
 </body>
