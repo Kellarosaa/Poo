@@ -2,20 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Embedded Website</title>
 </head>
 <body>
-    <label for="websiteUrl">Enter Website URL:</label>
-    <input type="text" id="websiteUrl" placeholder="https://example.com">
-    <button onclick="embedWebsite()">Embed Website</button>
-    <div id="embeddedContent"></div>
+    <label for="website-url">Enter Website URL:</label>
+    <input type="text" id="website-url">
+    <button onclick="embedWebsite()">Embed</button>
+    <div id="embedded-website"></div>
 
     <script>
         function embedWebsite() {
-            const url = document.getElementById('websiteUrl').value;
-            const embeddedContent = document.getElementById('embeddedContent');
-            embeddedContent.innerHTML = `<iframe src="${url}" width="100%" height="600"></iframe>`;
+            const url = document.getElementById('website-url').value;
+            document.getElementById('embedded-website').innerHTML = `<iframe src="${url}" width="100%" height="600"></iframe>`;
         }
     </script>
 </body>
